@@ -1,0 +1,110 @@
+* {
+    font-family: sans-serif; /* Aqui são as configurações padrões de estilo */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #18181B;
+    width: 100%;
+    height: 100vh; /* É passado 100vh para ocupar 100% da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Aqui após essas propriedades fui tudo centralizado e colocado um a baixo do outro */
+}
+
+.logo {
+    max-width: 600px;
+    margin-bottom: 100px; /* Definindo a largura máxima e o espaçamento entre os outros itens. */
+}
+
+.container-input {
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container-input span {
+    color: #FFF;
+    font-size: 22px;
+}
+
+.slider {
+    appearance: default;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white; 
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+}
+
+.button-cta {
+    height: 40px;
+    background-color: rgb(33, 206, 33);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer; /* Ao passar com o mouse em cima vira aquela "mão". */
+    color: rgb(247, 247, 238);
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container-password {
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.password {
+    height: 60px;
+    background-color: black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    margin-bottom: 40px;
+    transition: transform 0.5s; /* Ao passar o mouse a transição é efetuada */
+}
+
+.password:hover {
+    transform: scale(1.05);
+}
+
+.tooltip {
+    color: #FFF;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px; /* Definindo em cima e em baixo o padding */
+    background: rgb(15, 15, 15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 16px; /* Arrendodando a borda */
+    transition: all 2s ease-in-out; /* Basicamente com essa transição ao passar o mouse em cima a div aparece. */
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.container-password:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1; /* Opacidade 1 quando passar o mouse em cima */
+}
